@@ -11,6 +11,7 @@ import javax.persistence.Persistence;
 import javax.swing.JTable;
 import mostrar.banco.Cliente;
 import mostrar.banco.ClienteCadastro;
+import mostrar.banco.ClienteDeletar;
 
 /**
  *
@@ -30,5 +31,17 @@ public class ClienteControl {
         em.persist(cliente);
         em.getTransaction().commit();
         
+    }
+    
+    public static void Deletar()
+    {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("banco1?zeroDateTimeBehavior=convertToNullPU");
+        EntityManager em = emf.createEntityManager(); 
+        Long coluna =Long.parseLong(ClienteDeletar.txtDeletar.getText());
+        Cliente cliente = em.find(Cliente.class, coluna);
+        
+        em.getTransaction().begin();
+        em.remove(cliente);
+        em.getTransaction().commit();
     }
 }

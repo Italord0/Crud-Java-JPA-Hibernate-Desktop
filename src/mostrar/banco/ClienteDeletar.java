@@ -5,6 +5,8 @@
  */
 package mostrar.banco;
 
+import control.ClienteControl;
+
 /**
  *
  * @author Italo
@@ -28,7 +30,7 @@ public class ClienteDeletar extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtDeletar = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setClosable(true);
@@ -38,6 +40,11 @@ public class ClienteDeletar extends javax.swing.JInternalFrame {
         jLabel1.setText("Cód.Cliente:");
 
         jButton1.setText("Deletar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,7 +56,7 @@ public class ClienteDeletar extends javax.swing.JInternalFrame {
                         .addGap(19, 19, 19)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(66, 66, 66)
                         .addComponent(jButton1)))
@@ -60,7 +67,7 @@ public class ClienteDeletar extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtDeletar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
@@ -70,10 +77,16 @@ public class ClienteDeletar extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      ClienteControl.Deletar();
+      ClienteView.clienteList.clear();
+      ClienteView.clienteList.addAll(ClienteView.clienteQuery.getResultList());
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField jTextField1;
+    public static javax.swing.JTextField txtDeletar;
     // End of variables declaration//GEN-END:variables
 }
