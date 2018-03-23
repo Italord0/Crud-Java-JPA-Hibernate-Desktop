@@ -3,7 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/NewJFrame.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/ClienteView.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/ClienteDeletar.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/META-INF/persistence.xml</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/Cliente.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/ClienteCadastro.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/control/ClienteControl.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/Menu.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/ClienteAtualizar.java</file>
+            <file>file:/C:/Users/Italo/Documents/NetBeansProjects/Mostrar%20banco/src/mostrar/banco/Sobre.java</file>
         </group>
     </open-files>
 </project-private>

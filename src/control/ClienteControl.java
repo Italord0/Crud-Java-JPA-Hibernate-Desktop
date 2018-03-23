@@ -10,6 +10,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.swing.JTable;
 import mostrar.banco.Cliente;
+import mostrar.banco.ClienteCadastro;
 
 /**
  *
@@ -23,8 +24,8 @@ public class ClienteControl {
         EntityManager em = emf.createEntityManager();   
         
         Cliente cliente = new Cliente();
-        cliente.setClienteCPF("11916544436");
-        cliente.setClienteNome("Italo caralho");
+        cliente.setClienteCPF(ClienteCadastro.txtCPF.getText());
+        cliente.setClienteNome(ClienteCadastro.txtNome.getText());
         em.getTransaction().begin();
         em.persist(cliente);
         em.getTransaction().commit();
